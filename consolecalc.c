@@ -19,7 +19,13 @@ int main()
                 case '+': res += inn; break;
                 case '-': res -= inn; break;
                 case '*': res *= inn; break;
-                case '/': res /= inn; break;
+                case '/': 
+                    if (inn == 0) {
+                        printf("ERR!\n");
+                        return -1;
+                    }
+                    res /= inn; 
+                    break;
             }
         }
         flag = -flag; // set opposite
